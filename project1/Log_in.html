@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>
+            Log In
+        </title>
+        <style type="text/css">
+        *{
+            padding: 5;
+            margin: 0;
+        }
+        body{
+            text-align: center;
+            padding: 150px;
+            background-image: url("master.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            backdrop-filter: blur(3px);
+
+        }
+        h2{
+            color: whitesmoke;
+            font-weight: 50px;
+            background-color: transparent;
+            margin: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+        }
+        #name{
+            border-radius: 12px;
+            border-style: hidden;
+            padding-top: 9px;
+            padding-left: 5px;
+            border-width: 1px;
+            width: 25%;
+            
+        }
+        #name:hover{
+            width: 50%;
+        }
+        #password:hover{
+            width: 50%;
+        }
+
+        #password{
+            border-radius: 12px;
+            border-style: hidden;
+            padding: 7px;
+            margin: 10px;
+            width: 25%;
+           
+
+        }
+        #enter{
+            border-radius: 12px 0 12px 0;
+            width: 15%;
+            cursor: pointer; 
+            background-color: whitesmoke;
+            border-style: none;
+        }
+        #enter:hover{
+            background-color: skyblue;
+        }
+        p{
+          background-color: transparent;  
+          color: whitesmoke;
+          
+          position:sticky;
+        }
+        a:link{
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: white;
+            text-decoration: none;
+            font-size: 110%;
+            color: black;
+        }
+        #home{
+            text-align:end;
+            
+            
+        }
+       
+        </style>
+    </head>
+    <body>
+        <h2>Log In Here</h2>
+        <input type="text" placeholder="Enter Name" id="name"><br>
+        <input type="password" placeholder="Enter password" id="password"><br>
+        <input type="submit" name="Submit" id="enter"><br>
+        <p>Forgot password<a href="forgot_pass.html">Click</a>Here</p>
+        <div>
+            <p>New User <a href="signup1.html" target="_blank">Register</a> Here</p>
+        </div>
+        <div id="home">
+            <p>Back To <a href="home.html">Home</a> page </p>
+        </div>
+        <script type="text/javascript">
+            document.getElementById("enter").onclick=function(){
+                var name = document.getElementById("name").value;
+                var password = document.getElementById("password").value;
+                if((name=="vishnu")&&(password=="123456"))
+                {
+                    alert("Welcome " + name);
+                }else
+                {
+                    alert ("You are not Welcome " + name);
+                }
+            }
+        </script>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Forgot Password</title>
+        <style type="text/css">
+        *{
+            margin: 2px;
+            padding: 4px;
+
+        }
+        body{
+            padding-top: 180px;
+            background-color: white;
+
+            
+           
+        }
+        h2{
+            color: black;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-style: oblique;
+           
+        }
+        div{
+            
+            background-color: #95e8dc;
+            border-radius: 25px 0 25px 0;
+            min-width: 30%;
+            max-width: 40%;
+            
+        }
+        #email,#password,#cpassword{
+            border-radius: 12px;
+            border-style: hidden;
+            padding: 6px;
+            width: 35%;
+        }
+        #cpassword:hover{
+            width: 90%;
+        }
+        #email:hover{
+            width: 90%;
+        }
+        #password:hover{
+            width: 90%
+        }
+        #enter{
+            border-radius: 12px 0 12px 0;
+            border-style: hidden;
+            padding: 6px;
+
+        }
+        #enter:hover{
+            background-color: lightblue;
+            cursor: pointer;
+        }
+        p{
+            
+            text-align: left;
+        }
+        a:link{
+            text-decoration: none;
+        }
+        a:hover{
+            font-size: 110%;
+            background-color: black;
+            color:white; 
+        }
+        
+        </style>
+    </head>
+    <body>
+         <div>
+            <h2>Forgot Password</h2>
+            <input type="email" placeholder="Enter E-mail" id="email"><br/>
+            <input type="password" placeholder="Enter your Password" id="password"><br/>
+            <input type="password" placeholder="Re-enter Password" id="cpassword"><br/>
+            <button title="Enter to Submit" id="enter">Submit</button>
+        </div>
+        <p>Back to <a href="home.html">Home</a></p>
+        <script type="text/javascript">
+            document.getElementById("enter").onclick=function(){
+            var password = document.getElementById("password").value;
+            var cpassword= document.getElementById("cpassword").value;
+            if(password==cpassword)
+                {
+                alert("Passwords are Matched");
+                }
+                else
+                {
+                    alert("Passwords not Matched");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Sign in Page</title>
+        <style type="text/css">
+        *{
+            padding: 5px;
+            margin: 0;
+           
+        }
+        body{
+            text-align: center;
+            background-image: url("login.jfif");
+            background-position: center;
+            background-repeat:no-repeat ;
+            background-size: cover;
+            backdrop-filter: blur(5px); 
+        }
+        h2{
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100px;
+            padding-top: 100px;
+            padding-bottom: 10px;
+            
+        }
+        #name,#password,#cpassword,#email,#cemail,#age{
+            border-radius: 25px;
+            max-width: 30%;
+            min-width: 40%
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid rgb(169, 233, 241);
+        }
+        #age{
+            border-radius: 25px 0 25px 0;
+        }
+        div{
+            color: beige;
+        }
+        #enter{
+            border-radius: 12px;
+            background-color: white;
+            cursor: pointer;
+            width: 11%;
+        }
+        #enter:hover{
+            color:white;
+            background-color: silver;
+        }
+        p{
+            text-align:end;
+            color: white;
+        }
+        a:link{
+            text-decoration: none;
+            color:salmon;
+        }
+        a:hover{
+            text-decoration: none;
+            font-size:110%;
+            background-color: white;
+            color: black;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <h2>You Can Register Here!</h2>
+        <input type="text" placeholder="Enter Name" id="Name"><br>
+        <input type="password" placeholder="Enter password" id="password"><br>
+        <input type="password" placeholder="Confirm password" id="cpassword">
+        <br>
+        <input type="text" placeholder="Enter E-mail" id="email"><br>
+        <input type="text" placeholder="Confirm E-mail" id="cemail"><br>
+        <div>
+        <label>Gender</label>
+        <input type="radio" value="Male" >
+        <label for="radio">Male</label>
+        <input type="radio" value="Female">
+        <label for="radio">Female</label><br>
+        </div>
+        <input type="number" placeholder="Enter Age" id="age" ><br>
+        <input type="submit" name="Submit" title="Click Here" id="enter">
+        <p>Back to <a href="home.html">Home</a>Page</p>
+        <script type="text/javascript">
+        document.getElementById("enter").onclick=function(){
+          var name=document.getElementById("Name").value;
+          var password=document.getElementById("password").value;
+          var cpassword=document.getElementById("cpassword").value;
+          var email=document.getElementById("email").value;
+          var cemail=document.getElementById("cemail").value;
+          if((password==cpassword)&&(email==cemail))
+          {
+              alert("Welcome " + name);
+          }else{
+              alert("Password and email are not Matched "  + name );
+          }
+          
+        }
+        
+        
+        
+        
+        </script>
+    </body>
+</html>
